@@ -1,0 +1,62 @@
+/*Configurações globais*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Configurações da tela inicial*/
+.home{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    background-color: whitesmoke;
+}
+
+.icon{
+    width: 500PX;
+    height: 600px;
+    border-radius: 100%;
+    background-color: white;
+    margin-left:-70px;
+    margin-bottom: -99px;
+    z-index: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.home-info{
+    margin-top: 246px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.img-icon{
+    width: 202px;
+    height: 112px;
+    
+}
+
+.title-home{
+    color:#9F9F9F;
+    font-size:34px;
+    font-style: Bold;
+    font-family: 'Secular One', sans-serif;
+}
+
+.footer-home{
+    background-color: whitesmoke;
+    width: 100%;
+    height: 300px;
+    margin-bottom: 55px;
+}
