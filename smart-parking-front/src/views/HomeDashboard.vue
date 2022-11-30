@@ -5,19 +5,19 @@
             <p class="dashboard-number-texts">TOTAL DE VAGAS</p>
             <div class="vacancies">
                 <div class="vacancies-number">
-                    <div class="vacancies-dashboard" style="background-color: #198F6C;">10</div>
+                    <div class="vacancies-dashboard" style="background-color: #198F6C;">{{vagasLivres}}</div>
                     <p class="dashboard-number-texts">Livres</p>
                 </div>
                 <div class="vacancies-number">
-                    <div class="vacancies-dashboard" style="background-color: #E90B0B;">27</div>
+                    <div class="vacancies-dashboard" style="background-color: #E90B0B;">{{vagasOcupadas}}</div>
                     <p class="dashboard-number-texts">Ocupadas</p>
                 </div>
             </div>
         </div>
         <div class="text-info">
-            <small>Data: 27/11/2022</small><br/>
-            <small>Última Atualização: 23:34H</small><br/>
-            <small>Local:  shopping north way</small>
+            <small>Data: {{dataDaUltimaAtualizacao}}</small><br/>
+            <small>Última Atualização: {{horaDaUltimaAtualizacao}}</small><br/>
+            <small>Local: {{localizacaoDoEstacionamento}}</small>
         </div>
         <ButtomReload/>
     </div>
@@ -25,15 +25,23 @@
 </template>
 
 <script>
-import ButtomReload from './ButtomReload.vue'
-import SearchInput from './SearchInput.vue'
+import ButtomReload from '../components/ButtomReload.vue'
+import SearchInput from '../components/SearchInput.vue'
 
 export default {
     name: 'HomePage',
   components: {
     ButtomReload,
-    SearchInput
-  }
+    SearchInput,
+  },
+  data(){
+    return{
+    vagasLivres: 10,
+    vagasOcupadas: 270,
+    dataDaUltimaAtualizacao: "27/11/2022",
+    horaDaUltimaAtualizacao: "23:34H",
+    localizacaoDoEstacionamento: "shopping north way"
+    }}
 }
 </script>
 

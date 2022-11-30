@@ -1,8 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 
-import HomeDashboard from '../components/HomeDashboard.vue'
+import HomeDashboard from '../views/HomeDashboard.vue'
 import HomePage from '../components/HomePage.vue'
-
 
 
 const routes = [
