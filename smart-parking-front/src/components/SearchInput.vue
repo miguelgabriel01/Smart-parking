@@ -49,7 +49,4 @@ export default {
 .icon-options-parking{
     width: 35px;
 }
-
-
-
 </style>

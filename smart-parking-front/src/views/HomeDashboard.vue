@@ -27,6 +27,7 @@
 <script>
 import ButtomReload from '../components/ButtomReload.vue'
 import SearchInput from '../components/SearchInput.vue'
+import {api} from '../services.js'
 
 export default {
     name: 'HomePage',
@@ -40,8 +41,24 @@ export default {
     vagasOcupadas: 270,
     dataDaUltimaAtualizacao: "27/11/2022",
     horaDaUltimaAtualizacao: "23:34H",
-    localizacaoDoEstacionamento: "shopping north way"
-    }}
+    localizacaoDoEstacionamento: "shopping north way",
+    situacaoDoEstacionamento: null
+    }},
+    methods:{
+        getVagas(){
+            api.get('/vacancies')
+            .then(response => {
+                this.situacaoDoEstacionamento = response
+            })
+
+            if(this.situacaoDoEstacionamento == null){
+                    this.$router.push({path: '/errorpage'});
+            }
+        }
+    },
+    created(){
+        this.getVagas()
+    }
 }
 </script>
 

@@ -9,7 +9,17 @@
   
   <script>
   export default {
-  name: 'HomePage'
+  name: 'HomePage',
+  methods: {
+  redirectToDashboard(){
+    this.$router.push({path: '/dashboard'});
+  }
+},
+created() {
+  setTimeout(() => {
+    this.redirectToDashboard()
+  }, 4000);
+}
   }
   </script>
   
