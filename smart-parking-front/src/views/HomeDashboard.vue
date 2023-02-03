@@ -5,19 +5,19 @@
             <p class="dashboard-number-texts">TOTAL DE VAGAS</p>
             <div class="vacancies">
                 <div class="vacancies-number">
-                    <div class="vacancies-dashboard" style="background-color: #198F6C;">{{vagasLivres}}</div>
+                    <div class="vacancies-dashboard" style="background-color: #198F6C;">{{situacaoDoEstacionamento.data.vagaslivres}}</div>
                     <p class="dashboard-number-texts">Livres</p>
                 </div>
                 <div class="vacancies-number">
-                    <div class="vacancies-dashboard" style="background-color: #E90B0B;">{{vagasOcupadas}}</div>
+                    <div class="vacancies-dashboard" style="background-color: #E90B0B;">{{situacaoDoEstacionamento.data.vagasOcupadas}}</div>
                     <p class="dashboard-number-texts">Ocupadas</p>
                 </div>
             </div>
         </div>
         <div class="text-info">
-            <small>Data: {{dataDaUltimaAtualizacao}}</small><br/>
-            <small>Última Atualização: {{horaDaUltimaAtualizacao}}</small><br/>
-            <small>Local: {{localizacaoDoEstacionamento}}</small>
+            <small>Data: {{situacaoDoEstacionamento.data.dataDeAtualizacao}}</small><br/>
+            <small>Última Atualização: {{situacaoDoEstacionamento.data.horaDeAtualizacao}}</small><br/>
+            <small>Local: {{situacaoDoEstacionamento.data.localDoEstacionamento}}</small>
         </div>
         <ButtomReload/>
     </div>
@@ -37,23 +37,20 @@ export default {
   },
   data(){
     return{
-    vagasLivres: 10,
-    vagasOcupadas: 270,
-    dataDaUltimaAtualizacao: "27/11/2022",
-    horaDaUltimaAtualizacao: "23:34H",
-    localizacaoDoEstacionamento: "shopping north way",
-    situacaoDoEstacionamento: null
+    situacaoDoEstacionamento: null,
     }},
     methods:{
         getVagas(){
-            api.get('/vacancies')
+            api.get('/dadosSobreVagas')
             .then(response => {
+                console.log("response da api");
+                console.log(response.data);
                 this.situacaoDoEstacionamento = response
             })
 
-            if(this.situacaoDoEstacionamento == null){
+             if(this.situacaoDoEstacionamento == null){
                     this.$router.push({path: '/errorpage'});
-            }
+            } 
         }
     },
     created(){
