@@ -5,7 +5,7 @@
             <p class="dashboard-number-texts">TOTAL DE VAGAS</p>
             <div class="vacancies">
                 <div class="vacancies-number">
-                    <div class="vacancies-dashboard" style="background-color: #198F6C;">{{situacaoDoEstacionamento.data.vagaslivres}}</div>
+                    <div class="vacancies-dashboard" style="background-color: #198F6C;">{{situacaoDoEstacionamento.data.vagasLivres}}</div>
                     <p class="dashboard-number-texts">Livres</p>
                 </div>
                 <div class="vacancies-number">
@@ -15,9 +15,9 @@
             </div>
         </div>
         <div class="text-info">
-            <small>Data: {{situacaoDoEstacionamento.data.dataDeAtualizacao}}</small><br/>
-            <small>Última Atualização: {{situacaoDoEstacionamento.data.horaDeAtualizacao}}</small><br/>
-            <small>Local: {{situacaoDoEstacionamento.data.localDoEstacionamento}}</small>
+            <small>Data: {{situacaoDoEstacionamento.data.ultimaAtualizacaoData}}</small><br/>
+            <small>Última Atualização: {{situacaoDoEstacionamento.data.ultimaAtualizacaoHora}}</small><br/>
+            <small>Local: {{situacaoDoEstacionamento.data.localizacao}}</small>
         </div>
         <ButtomReload/>
     </div>
@@ -41,7 +41,8 @@ export default {
     }},
     methods:{
         getVagas(){
-            api.get('/dadosSobreVagas')
+            setInterval(()=>{
+                api.get('/dadosSobreVagas')
             .then(response => {
                 console.log("response da api");
                 console.log(response.data);
@@ -51,6 +52,8 @@ export default {
              if(this.situacaoDoEstacionamento == null){
                     this.$router.push({path: '/errorpage'});
             } 
+
+            },2000)
         }
     },
     created(){

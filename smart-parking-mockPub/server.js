@@ -1,33 +1,23 @@
 const http = require("http");
 const express = require("express");
+const fs = require("fs");
 const app = express();
 const cors = require("cors");
 
 app.use(cors());
 
 app.get("/dadosSobreVagas", function(req, res) {
-    res.json(
-        {
-            "vagas":[
-              {"id": 1,"situacao": "ocupada"},
-              {"id": 2,"situacao": "ocupada"},
-              {"id": 3,"situacao": "livre"},
-              {"id": 4,"situacao": "livre"},
-              {"id": 5,"situacao": "livre"},
-              {"id": 6,"situacao": "ocupada"},
-              {"id": 7,"situacao": "ocupada"},
-              {"id": 8,"situacao": "livre"},
-              {"id": 9,"situacao": "livre"},
-              {"id": 10,"situacao": "ocupada"},
-              {"id": 11,"situacao": "livre"}
-            ],
-            "vagaslivres": 20,
-            "vagasOcupadas": 39,
-              "localDoEstacionamento": "Shopping North Way",
-              "dataDeAtualizacao": "20/12/2022",
-              "horaDeAtualizacao": "23:44:44",
-          }
-    );
+  fs.readFile("../smart-parking-api/dadosVagas.json", "utf-8", (err, data) => {
+    if (err) {
+      console.error(err);
+      res.status(500).json({ error: "Erro ao ler o arquivo de dados" });
+    } else {
+      const dadosVagas = JSON.parse(data);
+      res.json(dadosVagas);
+    }
+  });
 });
 
-http.createServer(app).listen(3000, () => console.log("Servidor rodando local na porta 3000"));
+http.createServer(app).listen(3000, () =>
+  console.log("Servidor rodando local na porta 3000")
+);

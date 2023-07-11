@@ -41,7 +41,42 @@ def connect_mqtt():
 
 dadosSobreAsVagas = [
     {
-        "id": numberPub,
+        "id": 0,
+        "situacao": "ocupada",
+        "dataDaUltimaAtualizacao":  dateInText,
+        "horaDaUltimaAtualizacao":  updateTime,
+        "localizacao": "shopping north way"
+    },
+    {
+        "id": 1,
+        "situacao": "ocupada",
+        "dataDaUltimaAtualizacao":  dateInText,
+        "horaDaUltimaAtualizacao":  updateTime,
+        "localizacao": "shopping north way"
+    },
+        {
+        "id": 2,
+        "situacao": "ocupada",
+        "dataDaUltimaAtualizacao":  dateInText,
+        "horaDaUltimaAtualizacao":  updateTime,
+        "localizacao": "shopping north way"
+    },
+    {
+        "id": 3,
+        "situacao": "ocupada",
+        "dataDaUltimaAtualizacao":  dateInText,
+        "horaDaUltimaAtualizacao":  updateTime,
+        "localizacao": "shopping north way"
+    },
+        {
+        "id": 4,
+        "situacao": "ocupada",
+        "dataDaUltimaAtualizacao":  dateInText,
+        "horaDaUltimaAtualizacao":  updateTime,
+        "localizacao": "shopping north way"
+    },
+    {
+        "id": 5,
         "situacao": "ocupada",
         "dataDaUltimaAtualizacao":  dateInText,
         "horaDaUltimaAtualizacao":  updateTime,
@@ -77,8 +112,8 @@ def publish(client):
             print("    ")
             
             idSelectStatus = 0
-            if idSelect == dadosSobreAsVagas[0]["id"]:
-                print("Situação atual da vaga: " + dadosSobreAsVagas[0]["situacao"])
+            if idSelect == dadosSobreAsVagas[idSelect]["id"]:
+                print("Situação atual da vaga: " + dadosSobreAsVagas[idSelect]["situacao"])
                 print("Deseja alterar o status desta vaga?")
                 print("1 - Sim / 2 - Não ")
                 idSelectStatus =  int(input())
@@ -87,10 +122,10 @@ def publish(client):
 
             if idSelectStatus == 1:
                 if idSelect:
-                    if  dadosSobreAsVagas[0]["situacao"] == "ocupada":
-                        dadosSobreAsVagas[0]["situacao"] = "livre"
+                    if  dadosSobreAsVagas[idSelect]["situacao"] == "ocupada":
+                        dadosSobreAsVagas[idSelect]["situacao"] = "livre"
                     else:
-                        dadosSobreAsVagas[0]["situacao"] = "ocupada"
+                        dadosSobreAsVagas[idSelect]["situacao"] = "ocupada"
                 else:
                     print("Vaga indisponivel no momento!!!")
 
