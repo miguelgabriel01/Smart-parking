@@ -1,19 +1,15 @@
 {
-    "vagasLivres": 2,
-    "vagasOcupadas": 4,
-    "porcentagemDeVagasOcupadas": 67,
-    "porcentagemDeVagasLivres": 33,
-    "ultimaAtualizacaoHora": "23:33",
-    "ultimaAtualizacaoData": "11/7/2023",
+    "vagasLivres": 15,
+    "vagasOcupadas": 17,
+    "porcentagemDeVagasOcupadas": 53,
+    "porcentagemDeVagasLivres": 47,
+    "ultimaAtualizacaoHora": "00:45",
+    "ultimaAtualizacaoData": "12/7/2023",
     "localizacao": "shopping north way",
     "situacaoVagas": [
         {
-            "id": 0,
-            "situacao": "ocupada"
-        },
-        {
             "id": 1,
-            "situacao": "ocupada"
+            "situacao": "livre"
         },
         {
             "id": 2,
@@ -21,7 +17,7 @@
         },
         {
             "id": 3,
-            "situacao": "ocupada"
+            "situacao": "livre"
         },
         {
             "id": 4,
@@ -29,7 +25,115 @@
         },
         {
             "id": 5,
+            "situacao": "ocupada"
+        },
+        {
+            "id": 6,
+            "situacao": "ocupada"
+        },
+        {
+            "id": 7,
+            "situacao": "ocupada"
+        },
+        {
+            "id": 8,
             "situacao": "livre"
+        },
+        {
+            "id": 9,
+            "situacao": "livre"
+        },
+        {
+            "id": 10,
+            "situacao": "livre"
+        },
+        {
+            "id": 11,
+            "situacao": "ocupada"
+        },
+        {
+            "id": 12,
+            "situacao": "livre"
+        },
+        {
+            "id": 13,
+            "situacao": "ocupada"
+        },
+        {
+            "id": 14,
+            "situacao": "ocupada"
+        },
+        {
+            "id": 15,
+            "situacao": "ocupada"
+        },
+        {
+            "id": 16,
+            "situacao": "livre"
+        },
+        {
+            "id": 17,
+            "situacao": "ocupada"
+        },
+        {
+            "id": 18,
+            "situacao": "ocupada"
+        },
+        {
+            "id": 19,
+            "situacao": "ocupada"
+        },
+        {
+            "id": 20,
+            "situacao": "ocupada"
+        },
+        {
+            "id": 21,
+            "situacao": "livre"
+        },
+        {
+            "id": 22,
+            "situacao": "livre"
+        },
+        {
+            "id": 23,
+            "situacao": "ocupada"
+        },
+        {
+            "id": 24,
+            "situacao": "ocupada"
+        },
+        {
+            "id": 25,
+            "situacao": "ocupada"
+        },
+        {
+            "id": 26,
+            "situacao": "livre"
+        },
+        {
+            "id": 27,
+            "situacao": "livre"
+        },
+        {
+            "id": 28,
+            "situacao": "livre"
+        },
+        {
+            "id": 29,
+            "situacao": "ocupada"
+        },
+        {
+            "id": 30,
+            "situacao": "livre"
+        },
+        {
+            "id": 31,
+            "situacao": "livre"
+        },
+        {
+            "id": 32,
+            "situacao": "ocupada"
         }
     ]
 }

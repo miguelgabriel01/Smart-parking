@@ -3,6 +3,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import ErrorPage from '../views/ErrorPage.vue'
 import HomeDashboard from '../views/HomeDashboard.vue'
 import HomePage from '../components/HomePage.vue'
+import HomeParking from '../views/HomeParking.vue'
 
 
 const routes = [
@@ -21,6 +22,12 @@ const routes = [
     path: '/errorpage',
     name: 'ErrorPage',
     component: ErrorPage,
+    props: true
+  },
+  {
+    path: '/homeParking',
+    name: 'HomeParking',
+    component: HomeParking,
     props: true
   }
 
