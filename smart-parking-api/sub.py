@@ -1,6 +1,8 @@
 import random
 import time
 import json
+import datetime
+import os
 from paho.mqtt import client as mqtt_client
 
 broker = 'broker.emqx.io'
@@ -50,6 +52,15 @@ def processar_payload(payload):
     ultima_atualizacao_data = payload[0]['dataDaUltimaAtualizacao']
     localizacao = payload[0]['localizacao']
 
+    # Adicionar a estrutura situacaoVagas
+    situacao_vagas = []
+    for item in payload:
+        vaga = {
+            "id": item["id"],
+            "situacao": item["situacao"]
+        }
+        situacao_vagas.append(vaga)
+
     novo_json = {
         "vagasLivres": vagas_livres,
         "vagasOcupadas": vagas_ocupadas,
@@ -57,15 +68,27 @@ def processar_payload(payload):
         "porcentagemDeVagasLivres": porcentagem_vagas_livres,
         "ultimaAtualizacaoHora": ultima_atualizacao_hora,
         "ultimaAtualizacaoData": ultima_atualizacao_data,
-        "localizacao": localizacao
+        "localizacao": localizacao,
+        "situacaoVagas": situacao_vagas  # Adiciona situacaoVagas ao JSON
     }
 
     return novo_json
 
 def run():
+    # Verifica se o arquivo já existe e carrega seu conteúdo
+    if os.path.exists('dadosVagas.json'):
+        with open('dadosVagas.json', 'r') as file:
+            dados_vagas = json.load(file)
+    else:
+        dados_vagas = []
+
     client = connect_mqtt()
     subscribe(client)
     client.loop_forever()
+
+    # Salva o novo_json no arquivo dadosVagas.json
+    with open('dadosVagas.json', 'w') as file:
+        json.dump(dados_vagas, file, indent=4)
 
 if __name__ == '__main__':
     run()

@@ -1,9 +1,35 @@
 {
-    "vagasLivres": 1,
-    "vagasOcupadas": 5,
-    "porcentagemDeVagasOcupadas": 83,
-    "porcentagemDeVagasLivres": 17,
-    "ultimaAtualizacaoHora": "16:44",
+    "vagasLivres": 2,
+    "vagasOcupadas": 4,
+    "porcentagemDeVagasOcupadas": 67,
+    "porcentagemDeVagasLivres": 33,
+    "ultimaAtualizacaoHora": "23:33",
     "ultimaAtualizacaoData": "11/7/2023",
-    "localizacao": "shopping north way"
+    "localizacao": "shopping north way",
+    "situacaoVagas": [
+        {
+            "id": 0,
+            "situacao": "ocupada"
+        },
+        {
+            "id": 1,
+            "situacao": "ocupada"
+        },
+        {
+            "id": 2,
+            "situacao": "ocupada"
+        },
+        {
+            "id": 3,
+            "situacao": "ocupada"
+        },
+        {
+            "id": 4,
+            "situacao": "livre"
+        },
+        {
+            "id": 5,
+            "situacao": "livre"
+        }
+    ]
 }
