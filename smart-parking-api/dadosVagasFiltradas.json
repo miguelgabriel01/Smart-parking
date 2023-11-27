@@ -1,0 +1,418 @@
+[
+    {
+    "vagasLivres": 15,
+    "vagasOcupadas": 17,
+    "porcentagemDeVagasOcupadas": 53,
+    "porcentagemDeVagasLivres": 47,
+    "ultimaAtualizacaoHora": "00:26",
+    "ultimaAtualizacaoData": "11/10/2023",
+    "localizacao": "Shopping north way",
+    "situacaoVagas": [
+        {
+            "id": 1,
+            "situacao": "livre"
+        },
+        {
+            "id": 2,
+            "situacao": "ocupada"
+        },
+        {
+            "id": 3,
+            "situacao": "livre"
+        },
+        {
+            "id": 4,
+            "situacao": "livre"
+        },
+        {
+            "id": 5,
+            "situacao": "livre"
+        },
+        {
+            "id": 6,
+            "situacao": "livre"
+        },
+        {
+            "id": 7,
+            "situacao": "livre"
+        },
+        {
+            "id": 8,
+            "situacao": "ocupada"
+        },
+        {
+            "id": 9,
+            "situacao": "ocupada"
+        },
+        {
+            "id": 10,
+            "situacao": "livre"
+        },
+        {
+            "id": 11,
+            "situacao": "ocupada"
+        },
+        {
+            "id": 12,
+            "situacao": "ocupada"
+        },
+        {
+            "id": 13,
+            "situacao": "livre"
+        },
+        {
+            "id": 14,
+            "situacao": "livre"
+        },
+        {
+            "id": 15,
+            "situacao": "livre"
+        },
+        {
+            "id": 16,
+            "situacao": "ocupada"
+        },
+        {
+            "id": 17,
+            "situacao": "ocupada"
+        },
+        {
+            "id": 18,
+            "situacao": "livre"
+        },
+        {
+            "id": 19,
+            "situacao": "livre"
+        },
+        {
+            "id": 20,
+            "situacao": "livre"
+        },
+        {
+            "id": 21,
+            "situacao": "ocupada"
+        },
+        {
+            "id": 22,
+            "situacao": "ocupada"
+        },
+        {
+            "id": 23,
+            "situacao": "livre"
+        },
+        {
+            "id": 24,
+            "situacao": "ocupada"
+        },
+        {
+            "id": 25,
+            "situacao": "ocupada"
+        },
+        {
+            "id": 26,
+            "situacao": "ocupada"
+        },
+        {
+            "id": 27,
+            "situacao": "ocupada"
+        },
+        {
+            "id": 28,
+            "situacao": "ocupada"
+        },
+        {
+            "id": 29,
+            "situacao": "ocupada"
+        },
+        {
+            "id": 30,
+            "situacao": "ocupada"
+        },
+        {
+            "id": 31,
+            "situacao": "livre"
+        },
+        {
+            "id": 32,
+            "situacao": "ocupada"
+        }
+    ]
+},{
+    "vagasLivres": 15,
+    "vagasOcupadas": 17,
+    "porcentagemDeVagasOcupadas": 53,
+    "porcentagemDeVagasLivres": 47,
+    "ultimaAtualizacaoHora": "00:26",
+    "ultimaAtualizacaoData": "11/10/2023",
+    "localizacao": "Shopping de igarassu",
+    "situacaoVagas": [
+        {
+            "id": 1,
+            "situacao": "livre"
+        },
+        {
+            "id": 2,
+            "situacao": "ocupada"
+        },
+        {
+            "id": 3,
+            "situacao": "livre"
+        },
+        {
+            "id": 4,
+            "situacao": "livre"
+        },
+        {
+            "id": 5,
+            "situacao": "livre"
+        },
+        {
+            "id": 6,
+            "situacao": "livre"
+        },
+        {
+            "id": 7,
+            "situacao": "livre"
+        },
+        {
+            "id": 8,
+            "situacao": "ocupada"
+        },
+        {
+            "id": 9,
+            "situacao": "ocupada"
+        },
+        {
+            "id": 10,
+            "situacao": "livre"
+        },
+        {
+            "id": 11,
+            "situacao": "ocupada"
+        },
+        {
+            "id": 12,
+            "situacao": "ocupada"
+        },
+        {
+            "id": 13,
+            "situacao": "livre"
+        },
+        {
+            "id": 14,
+            "situacao": "livre"
+        },
+        {
+            "id": 15,
+            "situacao": "livre"
+        },
+        {
+            "id": 16,
+            "situacao": "ocupada"
+        },
+        {
+            "id": 17,
+            "situacao": "ocupada"
+        },
+        {
+            "id": 18,
+            "situacao": "livre"
+        },
+        {
+            "id": 19,
+            "situacao": "livre"
+        },
+        {
+            "id": 20,
+            "situacao": "livre"
+        },
+        {
+            "id": 21,
+            "situacao": "ocupada"
+        },
+        {
+            "id": 22,
+            "situacao": "ocupada"
+        },
+        {
+            "id": 23,
+            "situacao": "livre"
+        },
+        {
+            "id": 24,
+            "situacao": "ocupada"
+        },
+        {
+            "id": 25,
+            "situacao": "ocupada"
+        },
+        {
+            "id": 26,
+            "situacao": "ocupada"
+        },
+        {
+            "id": 27,
+            "situacao": "ocupada"
+        },
+        {
+            "id": 28,
+            "situacao": "ocupada"
+        },
+        {
+            "id": 29,
+            "situacao": "ocupada"
+        },
+        {
+            "id": 30,
+            "situacao": "ocupada"
+        },
+        {
+            "id": 31,
+            "situacao": "livre"
+        },
+        {
+            "id": 32,
+            "situacao": "ocupada"
+        }
+    ]
+},
+{
+    "vagasLivres": 15,
+    "vagasOcupadas": 17,
+    "porcentagemDeVagasOcupadas": 53,
+    "porcentagemDeVagasLivres": 47,
+    "ultimaAtualizacaoHora": "00:26",
+    "ultimaAtualizacaoData": "11/10/2023",
+    "localizacao": "Shopping Patteo Olinda",
+    "situacaoVagas": [
+        {
+            "id": 1,
+            "situacao": "livre"
+        },
+        {
+            "id": 2,
+            "situacao": "ocupada"
+        },
+        {
+            "id": 3,
+            "situacao": "livre"
+        },
+        {
+            "id": 4,
+            "situacao": "livre"
+        },
+        {
+            "id": 5,
+            "situacao": "livre"
+        },
+        {
+            "id": 6,
+            "situacao": "livre"
+        },
+        {
+            "id": 7,
+            "situacao": "livre"
+        },
+        {
+            "id": 8,
+            "situacao": "ocupada"
+        },
+        {
+            "id": 9,
+            "situacao": "ocupada"
+        },
+        {
+            "id": 10,
+            "situacao": "livre"
+        },
+        {
+            "id": 11,
+            "situacao": "ocupada"
+        },
+        {
+            "id": 12,
+            "situacao": "ocupada"
+        },
+        {
+            "id": 13,
+            "situacao": "livre"
+        },
+        {
+            "id": 14,
+            "situacao": "livre"
+        },
+        {
+            "id": 15,
+            "situacao": "livre"
+        },
+        {
+            "id": 16,
+            "situacao": "ocupada"
+        },
+        {
+            "id": 17,
+            "situacao": "ocupada"
+        },
+        {
+            "id": 18,
+            "situacao": "livre"
+        },
+        {
+            "id": 19,
+            "situacao": "livre"
+        },
+        {
+            "id": 20,
+            "situacao": "livre"
+        },
+        {
+            "id": 21,
+            "situacao": "ocupada"
+        },
+        {
+            "id": 22,
+            "situacao": "ocupada"
+        },
+        {
+            "id": 23,
+            "situacao": "livre"
+        },
+        {
+            "id": 24,
+            "situacao": "ocupada"
+        },
+        {
+            "id": 25,
+            "situacao": "ocupada"
+        },
+        {
+            "id": 26,
+            "situacao": "ocupada"
+        },
+        {
+            "id": 27,
+            "situacao": "ocupada"
+        },
+        {
+            "id": 28,
+            "situacao": "ocupada"
+        },
+        {
+            "id": 29,
+            "situacao": "ocupada"
+        },
+        {
+            "id": 30,
+            "situacao": "ocupada"
+        },
+        {
+            "id": 31,
+            "situacao": "livre"
+        },
+        {
+            "id": 32,
+            "situacao": "ocupada"
+        }
+    ]
+}
+]

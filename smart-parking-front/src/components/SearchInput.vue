@@ -1,16 +1,38 @@
 <template>
-    <nav class="search-parking">
-        <img src="../assets/icons/Vector.png" alt="" class="icon-search">
-        <p class="info-parking">Procurar Estacionamento</p>
-        <img src="../assets/icons/expand_more_FILL0_wght400_GRAD0_opsz48.svg" alt="" class="icon-options-parking">
-    </nav>
+  <select class="search-parking" v-model="selectedLocation" @change="handleSelectionChange">
+    <img src="../assets/icons/Vector.png" alt="" class="icon-search">
+    <option value="">Procurar Estacionamento</option>
+    <option v-for="location in locations" :key="location.value" :value="location.value">{{ location.label }}</option>
+  </select>
 </template>
 
 <script>
 export default {
-    name: 'SearchInput'
-}
+  name: 'SearchInput',
+  computed: {
+    selectedLocation: {
+      get() {
+        return this.$store.state.selectedLocation || ''; // Use o valor do store
+      },
+      set(value) {
+        this.$store.commit('setSelectedLocation', value);
+        this.$emit('location-change', value); // Emita um evento personalizado
+      },
+    },
+    locations() {
+      return this.$store.state.locations;
+    },
+  },
+  methods: {
+    handleSelectionChange() {
+      // Este método é chamado quando a opção é alterada
+      console.log('Opção selecionada:', this.selectedLocation);
+    },
+  },
+};
 </script>
+
+
 
 <style scoped>
 /*Configurações globais*/
@@ -31,7 +53,12 @@ export default {
     justify-content: space-between;
     align-content: center;
     margin-top: 20px;
-
+    outline: none;
+    border: none;
+    font-size:15px;
+    font-style: Bold;
+    font-family: 'Secular One', sans-serif;
+    text-align: center;
 }
 
 .info-parking{
@@ -39,6 +66,15 @@ export default {
     font-size:15px;
     font-style: Bold;
     font-family: 'Secular One', sans-serif;
+}
+
+select option{
+    color:#9F9F9F;
+    font-size:15px;
+    font-style: Bold;
+    font-family: 'Secular One', sans-serif;
+    border: none;
+    outline: none;
 }
 
 .icon-search{

@@ -1,15 +1,15 @@
 {
-    "vagasLivres": 15,
-    "vagasOcupadas": 17,
-    "porcentagemDeVagasOcupadas": 53,
-    "porcentagemDeVagasLivres": 47,
-    "ultimaAtualizacaoHora": "00:45",
-    "ultimaAtualizacaoData": "12/7/2023",
+    "vagasLivres": 14,
+    "vagasOcupadas": 18,
+    "porcentagemDeVagasOcupadas": 56,
+    "porcentagemDeVagasLivres": 44,
+    "ultimaAtualizacaoHora": "22:52",
+    "ultimaAtualizacaoData": "26/11/2023",
     "localizacao": "shopping north way",
     "situacaoVagas": [
         {
             "id": 1,
-            "situacao": "livre"
+            "situacao": "ocupada"
         },
         {
             "id": 2,
@@ -21,7 +21,7 @@
         },
         {
             "id": 4,
-            "situacao": "livre"
+            "situacao": "ocupada"
         },
         {
             "id": 5,
@@ -29,7 +29,7 @@
         },
         {
             "id": 6,
-            "situacao": "ocupada"
+            "situacao": "livre"
         },
         {
             "id": 7,
@@ -45,11 +45,11 @@
         },
         {
             "id": 10,
-            "situacao": "livre"
+            "situacao": "ocupada"
         },
         {
             "id": 11,
-            "situacao": "ocupada"
+            "situacao": "livre"
         },
         {
             "id": 12,
@@ -57,7 +57,7 @@
         },
         {
             "id": 13,
-            "situacao": "ocupada"
+            "situacao": "livre"
         },
         {
             "id": 14,
@@ -65,11 +65,11 @@
         },
         {
             "id": 15,
-            "situacao": "ocupada"
+            "situacao": "livre"
         },
         {
             "id": 16,
-            "situacao": "livre"
+            "situacao": "ocupada"
         },
         {
             "id": 17,
@@ -85,7 +85,7 @@
         },
         {
             "id": 20,
-            "situacao": "ocupada"
+            "situacao": "livre"
         },
         {
             "id": 21,
@@ -93,7 +93,7 @@
         },
         {
             "id": 22,
-            "situacao": "livre"
+            "situacao": "ocupada"
         },
         {
             "id": 23,
@@ -109,7 +109,7 @@
         },
         {
             "id": 26,
-            "situacao": "livre"
+            "situacao": "ocupada"
         },
         {
             "id": 27,
@@ -117,11 +117,11 @@
         },
         {
             "id": 28,
-            "situacao": "livre"
+            "situacao": "ocupada"
         },
         {
             "id": 29,
-            "situacao": "ocupada"
+            "situacao": "livre"
         },
         {
             "id": 30,
@@ -129,11 +129,11 @@
         },
         {
             "id": 31,
-            "situacao": "livre"
+            "situacao": "ocupada"
         },
         {
             "id": 32,
-            "situacao": "ocupada"
+            "situacao": "livre"
         }
     ]
 }

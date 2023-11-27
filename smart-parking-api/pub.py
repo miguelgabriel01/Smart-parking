@@ -3,6 +3,7 @@ import time
 import json
 from paho.mqtt import client as mqtt_client
 from datetime import date, datetime
+import threading
 
 numberPub = random.randint(1, 52)
 
@@ -22,7 +23,7 @@ def connect_mqtt():
         if rc == 0:
             print("Connected to MQTT Broker!")
         else:
-            print("Failed to connect, return code %d\n", rc)
+            print("Failed to connect, return code %d\n" % rc)
 
     client = mqtt_client.Client(client_id)
     client.username_pw_set('emqx', 'public')
@@ -46,17 +47,43 @@ totalParkingSpaces = 32
 
 def publish(client):
     print('-----------------------------')
-    print("*       Smarth-parking      *")
+    print("*       Smart-parking       *")
     print('-----------------------------')
 
     while True:
+        def ler_arquivo_json(nome_arquivo):
+            with open(nome_arquivo, 'r') as arquivo:
+                dados = json.load(arquivo)
+                valor = dados.get("livre")
+                return valor
+
+        nome_arquivo = "situacaoVagaDoDispositivo.json"
+        valor_livre = ler_arquivo_json(nome_arquivo)
+        print("Valor da vaga livre:", valor_livre)
+        
         print(" ")
         print("Numero total de vagas no estacionamento: " + str(totalParkingSpaces))
         print(" ")
         print("Status atual sobre as vagas: ")
         print(" ")
-        print(json.dumps(dadosSobreAsVagas, indent=4))
-        print("    ")
+        json_payload = json.dumps(dadosSobreAsVagas, indent=4)
+        print(json_payload)
+        print("vaga que vou alterar: ", dadosSobreAsVagas[0])
+        
+        if valor_livre == True and dadosSobreAsVagas[0]["situacao"] == "ocupada":
+            dadosSobreAsVagas[0]["situacao"] = "livre"
+        elif valor_livre == True and dadosSobreAsVagas[0]["situacao"] == "livre":
+            dadosSobreAsVagas[0]["situacao"] = "livre"
+        elif valor_livre == False and dadosSobreAsVagas[0]["situacao"] == "livre":
+            dadosSobreAsVagas[0]["situacao"] = "ocupada"
+        else:
+            dadosSobreAsVagas[0]["situacao"] = "ocupada"
+            
+        json_payload = json.dumps(dadosSobreAsVagas, indent=4)
+        print(json_payload)
+        
+        client.publish(topic, json_payload)
+
         idSelect = int(input("Digite a vaga que deseja alterar (ou 0 para sair): "))
 
         if idSelect == 0:
@@ -81,10 +108,43 @@ def publish(client):
         else:
             print("Número de vaga inválido. Tente novamente.")
 
+def check_and_update(client):
+    while True:
+        def ler_arquivo_json(nome_arquivo):
+            with open(nome_arquivo, 'r') as arquivo:
+                dados = json.load(arquivo)
+                valor = dados.get("livre")
+                return valor
+
+        nome_arquivo = "situacaoVagaDoDispositivo.json"
+        valor_livre_anterior = None
+        
+        while True:
+            valor_livre = ler_arquivo_json(nome_arquivo)
+            
+            if valor_livre_anterior is not None and valor_livre != valor_livre_anterior:
+                if valor_livre:
+                    dadosSobreAsVagas[0]["situacao"] = "livre" if dadosSobreAsVagas[0]["situacao"] != "livre" else "livre"
+                else:
+                    dadosSobreAsVagas[0]["situacao"] = "ocupada" if dadosSobreAsVagas[0]["situacao"] != "ocupada" else "ocupada"
+                    
+                json_payload = json.dumps(dadosSobreAsVagas, indent=4)
+                print("Atualização feita no arquivo situacaoVagaDoDispositivo.json:")
+                print(json_payload)
+                
+                client.publish(topic, json_payload)
+
+            valor_livre_anterior = valor_livre
+            time.sleep(1)
+
 def run():
     client = connect_mqtt()
     client.loop_start()
-    publish(client)
+    
+    update_thread = threading.Thread(target=check_and_update, args=(client,))
+    update_thread.start()
 
+    publish(client)
+    
 if __name__ == '__main__':
     run()
